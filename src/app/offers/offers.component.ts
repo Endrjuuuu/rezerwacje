@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Offer, OffersService } from '../offers.service';
 
 @Component({
   selector: 'app-offers',
@@ -9,18 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './offers.component.scss'
 })
 export class OffersComponent {
-  offers = [
-    {
-      city: 'Chicago',
-      country: 'USA',
-      isCapitol: false,
-      population: 2697,
-    },
-    {
-      city: 'Rome',
-      country: 'Italy',
-      isCapitol: true,
-      population: 2873
-    },
-  ];
+  offers: Offer[] = [];
+
+  constructor(
+    offersService: OffersService
+  ) {
+    this.offers = offersService.list();
+  }
 }

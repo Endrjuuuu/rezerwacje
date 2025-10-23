@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BookingsService } from '../bookings.service';
 
 @Component({
   selector: 'app-bookings',
@@ -9,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class BookingsComponent {
 
+  constructor(private bookingsService: BookingsService) {
+
+  }
 }

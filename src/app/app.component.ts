@@ -4,6 +4,7 @@ import { LogoComponent } from "./logo/logo.component";
 import { CommonModule } from '@angular/common';
 import { OffersComponent } from './offers/offers.component';
 import { BookingsComponent } from './bookings/bookings.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @Component({
   selector: 'app-root',
@@ -13,14 +14,10 @@ import { BookingsComponent } from './bookings/bookings.component';
     RouterOutlet,
     LogoComponent,
     OffersComponent,
-    BookingsComponent],
+    BookingsComponent,
+    NavigationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'rezerwacje';
-  ktoKogo = [
-    { kto: 'Ala', kogo: 'kota' },
-    { kto: 'Kot', kogo: 'Alę' }
-  ]
 }

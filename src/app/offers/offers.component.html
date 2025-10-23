@@ -1,11 +1,9 @@
-<p>offers works!</p>
-
 <div *ngFor="let offer of offers">
-  {{ offer.city }}
-  {{ offer.population }}
+  {{ offer.city | uppercase }}
+  <div *ngFor="let v of offer | keyvalue">{{ v.key }}: {{ v.value }}</div>
+  <span *ngIf="offer.place">
+    <div *ngFor="let v of offer.place | keyvalue">
+      wewnątrz place: {{ v.key }} : {{ v.value }}
+    </div>
+  </span>
 </div>
-
-Angular 17: @for (offer of offers; track offer.city) {
-{{ offer.city }}
-{{ offer.population }}
-}
