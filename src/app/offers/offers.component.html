@@ -1,9 +1,11 @@
 <p>offers works!</p>
 
 <div *ngFor="let offer of offers">
-    {{offer.city}}
-    {{offer.population}}
-
+  {{ offer.city }}
+  {{ offer.population }}
 </div>
 
-Angular 17:
+Angular 17: @for (offer of offers; track offer.city) {
+{{ offer.city }}
+{{ offer.population }}
+}
