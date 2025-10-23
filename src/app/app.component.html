@@ -12,6 +12,14 @@ długość tytułu: {{ title.length }}
 
 {{ 2 + 2 }}
 
+<div *ngFor="let nazwaZmiennej of ktoKogo">
+    {{nazwaZmiennej.kto}} ma {{nazwaZmiennej.kogo}}
+</div>
+
+@for (nazwaZmiennej of ktoKogo; track nazwaZmiennej.kto) {
+{{nazwaZmiennej.kto}} ma {{nazwaZmiennej.kogo}}
+}
+
 <app-offers></app-offers>
 <app-bookings></app-bookings>
 

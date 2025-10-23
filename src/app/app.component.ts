@@ -9,8 +9,8 @@ import { BookingsComponent } from './bookings/bookings.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterOutlet, 
+    CommonModule,
+    RouterOutlet,
     LogoComponent,
     OffersComponent,
     BookingsComponent],
@@ -19,4 +19,8 @@ import { BookingsComponent } from './bookings/bookings.component';
 })
 export class AppComponent {
   title = 'rezerwacje';
+  ktoKogo = [
+    { kto: 'Ala', kogo: 'kota' },
+    { kto: 'Kot', kogo: 'Alę' }
+  ]
 }
