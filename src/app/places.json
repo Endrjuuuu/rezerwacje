@@ -1,0 +1,76 @@
+{
+    "cities": [
+        {
+            "city": "Chicago",
+            "country": "USA",
+            "isCapitol": false,
+            "population": 2697
+        },
+        {
+            "city": "Rome",
+            "country": "Italy",
+            "isCapitol": true,
+            "population": 2873
+        },
+        {
+            "city": "London",
+            "country": "UK",
+            "isCapitol": true,
+            "population": 8962
+        },
+        {
+            "city": "Venice",
+            "country": "Italy",
+            "isCapitol": false,
+            "population": 260
+        },
+        {
+            "city": "Athens",
+            "country": "Greece",
+            "isCapitol": true,
+            "population": 6640
+        },
+        {
+            "city": "Sparta",
+            "country": "Greece",
+            "isCapitol": false,
+            "population": 35
+        },
+        {
+            "city": "Nicea",
+            "country": "France",
+            "isCapitol": false,
+            "population": 347
+        },
+        {
+            "city": "Edynburg",
+            "country": "UK",
+            "isCapitol": false,
+            "population": 540
+        },
+        {
+            "city": "Prague",
+            "country": "Czech Republic",
+            "isCapitol": true,
+            "population": 1300
+        },
+        {
+            "city": "Dubai",
+            "country": "United Arab Emirates",
+            "isCapitol": false,
+            "population": 3137
+        },
+        {
+            "city": "Sydney",
+            "country": "Australia",
+            "isCapitol": false,
+            "population": 5312
+        },
+        {
+            "city": "Cairo",
+            "country": "Egypt",
+            "isCapitol": true,
+            "population": 20400
+        }
+    ]
+}

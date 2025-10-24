@@ -1,0 +1,130 @@
+{
+    "details": [
+        {
+            "name": "Rzym",
+            "enName": "Rome",
+            "pictures": [],
+            "description": "Wspaniałe wakacje all-inclusive w stolicy Włoch. Możliwość wykupienia dodatkowych wycieczek. Odkryj piękno Koloseum, Fontanny di Trevi i Watykanu.",
+            "startDate": "2024-06-23T00:00:00.000Z",
+            "endDate": "2024-06-29T00:00:00.000Z",
+            "cost": 7500
+        },
+        {
+            "name": "Wenecja",
+            "enName": "Venice",
+            "pictures": [],
+            "description": "Romantyczne wakacje w magicznej Wenecji. Spaceruj po kanałach, zobacz Plac Świętego Marka i Rialto.",
+            "startDate": "2024-07-15T00:00:00.000Z",
+            "endDate": "2024-07-21T00:00:00.000Z",
+            "cost": 7100
+        },
+        {
+            "name": "Ateny",
+            "enName": "Athens",
+            "pictures": [],
+            "description": "Zacznij zwiedzanie Grecji od Aten. Wspaniałe zabytki, poczuj dotyk historii. Obejrzyj Partenon, Akropol i Plakę.",
+            "startDate": "2024-07-01T00:00:00.000Z",
+            "endDate": "2024-07-07T00:00:00.000Z",
+            "cost": 5950
+        },
+        {
+            "name": "Sparta",
+            "enName": "Sparta",
+            "pictures": [],
+            "description": "Przemierzaj ślady starożytnej Sparty. Poznaj historię starożytnej Grecji i jej wojowników.",
+            "startDate": "2024-08-10T00:00:00.000Z",
+            "endDate": "2024-08-16T00:00:00.000Z",
+            "cost": 6200
+        },
+        {
+            "name": "Paryż",
+            "enName": "Paris",
+            "pictures": [],
+            "description": "Rusz w podróż przez Paryż śladami znanych artystów. A gdy już nasiąkniesz sztuką, usiądź przy lampce wina w lokalnej kawiarni. Zwiedź Luwr, Wieżę Eiffla i dzielnicę Montmartre.",
+            "startDate": "2024-07-02T00:00:00.000Z",
+            "endDate": "2024-07-08T00:00:00.000Z",
+            "cost": 6999
+        },
+        {
+            "name": "Nicea",
+            "enName": "Nice",
+            "pictures": [],
+            "description": "Urocze miasto na Lazurowym Wybrzeżu. Ciesz się plażami, Promenade des Anglais i klimatem francuskiej Rivierze.",
+            "startDate": "2024-09-01T00:00:00.000Z",
+            "endDate": "2024-09-07T00:00:00.000Z",
+            "cost": 7300
+        },
+        {
+            "name": "Londyn",
+            "enName": "London",
+            "pictures": [],
+            "description": "Zwiedź stolicę Wielkiej Brytanii. Odkryj tajemnice Buckingham Palace, Tower of London i British Museum.",
+            "startDate": "2024-07-03T00:00:00.000Z",
+            "endDate": "2024-07-10T00:00:00.000Z",
+            "cost": 6499
+        },
+        {
+            "name": "Edynburg",
+            "enName": "Edinburgh",
+            "pictures": [],
+            "description": "Przeżyj magiczną atmosferę szkockiej stolicy. Odkryj Zamek Edynburski, Stare Miasto i Festiwal Fringe.",
+            "startDate": "2024-08-25T00:00:00.000Z",
+            "endDate": "2024-08-31T00:00:00.000Z",
+            "cost": 6800
+        },
+        {
+            "name": "Nowy Jork",
+            "enName": "New York",
+            "pictures": [],
+            "description": "Zwiedź Nowy Jork. Wycieczka po Nowym Jorku nie może odbyć się bez zapoznania się z tutejszymi wernisażami. Metropolitan Museum of Art, Guggenheim, MoMA i The National 9/11.",
+            "startDate": "2024-06-23T00:00:00.000Z",
+            "endDate": "2024-06-23T00:00:00.000Z",
+            "cost": 7999
+        },
+        {
+            "name": "Chicago",
+            "enName": "Chicago",
+            "pictures": [],
+            "description": "Odkryj urok Windy City. Zwiedź Navy Pier, Willis Tower i słynne Millennium Park.",
+            "startDate": "2024-08-05T00:00:00.000Z",
+            "endDate": "2024-08-12T00:00:00.000Z",
+            "cost": 6700
+        },
+        {
+            "name": "Praga",
+            "enName": "Prague",
+            "pictures": [],
+            "description": "Stolica Czech urzeka swoją architekturą. Zwiedź Zamek Praski, Most Karola i malowniczą Starówkę.",
+            "startDate": "2024-08-01T00:00:00.000Z",
+            "endDate": "2024-08-07T00:00:00.000Z",
+            "cost": 6200
+        },
+        {
+            "name": "Dubaj",
+            "enName": "Dubai",
+            "pictures": [],
+            "description": "Futurystyczne miasto w Zjednoczonych Emiratach Arabskich. Odkryj luksusowe centra handlowe, Burdż Chalifę i sztuczną wyspę Palm Jumeirah.",
+            "startDate": "2024-10-10T00:00:00.000Z",
+            "endDate": "2024-10-17T00:00:00.000Z",
+            "cost": 9200
+        },
+        {
+            "name": "Sydney",
+            "enName": "Sydney",
+            "pictures": [],
+            "description": "Miasto nad Zatoką Sydney. Zwiedź Operę w Sydney, Most Harbour i relaksuj się na plażach Bondi Beach.",
+            "startDate": "2024-11-15T00:00:00.000Z",
+            "endDate": "2024-11-21T00:00:00.000Z",
+            "cost": 7800
+        },
+        {
+            "name": "Kair",
+            "enName": "Cairo",
+            "pictures": [],
+            "description": "Stolica Egiptu pełna tajemniczej historii. Obejrzyj piramidy w Gizie, Muzeum Egipskie i bazar w Chan al-Chalili.",
+            "startDate": "2024-09-20T00:00:00.000Z",
+            "endDate": "2024-09-27T00:00:00.000Z",
+            "cost": 6900
+        }
+    ]
+}

@@ -1,16 +1,26 @@
+$accentColor: #3f51b5;
+$primaryColor: #fff;
+$actionColor: #fc4786;
+$small-gap: 0.5rem;
+$standard-gap: 1rem;
+
 nav {
-    padding: 10px;
+    background-color: $accentColor;
+    padding: $small-gap;
 
     ul {
         list-style: none;
         display: flex;
-        gap: 15px;
+        gap: $small-gap;
+
+        a {
+            text-decoration: none;
+            color: $primaryColor;
+
+            &:hover {
+                color: $actionColor;
+            }
+        }
+
     }
 }
-
-nav a {
-    text-decoration: none;
-}
-
-
-// 6.3 - 1 min
