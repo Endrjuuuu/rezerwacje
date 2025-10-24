@@ -1,8 +1,4 @@
-$accentColor: #3f51b5;
-$primaryColor: #fff;
-$actionColor: #fc4786;
-$small-gap: 0.5rem;
-$standard-gap: 1rem;
+@import '../settings/variables';
 
 nav {
     background-color: $accentColor;

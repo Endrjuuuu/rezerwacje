@@ -6,7 +6,7 @@ import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-offer',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, DatePipe],
   templateUrl: './offer.component.html',
   styleUrl: './offer.component.scss'
 })

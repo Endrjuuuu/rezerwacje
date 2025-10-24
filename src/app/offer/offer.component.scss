@@ -1,15 +1,45 @@
+@import '../settings/variables';
+
+@mixin size-and-padding {
+    padding: $small-gap;
+    width: 400px;
+}
+
 .offer {
     border: 1px solid black;
     padding: 10px;
     margin: 10px;
     display: flex;
 
+    .booking {
+        width: 80px;
+        background-color: $accentColor;
+        padding: $small-gap;
+        text-align: center;
+        color: $primaryColor;
+    }
+
+    .mainOffer {
+        .bigPicture {
+            @include size-and-padding();
+        }
+
+        .description {
+            @include size-and-padding();
+        }
+    }
+
+    .dates {
+        @include size-and-padding();
+        font-size: 24px;
+    }
+
     div:first-child {
         width: 120px;
     }
 
     .picture {
-        padding-left: 10px;
+        @include size-and-padding();
         width: 80px;
     }
 }

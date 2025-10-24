@@ -18,11 +18,16 @@
         alt="Offer picture"
       />
       }
+
+      <div class="description">
+        {{ offer.description }}
+      </div>
     </div>
-    <div class="description">
-      {{ offer.description }}
+
+    <div class="dates">
+      {{ offer.startDate | date : "dd.MM.YYYY" }} -
+      {{ offer.endDate | date : "dd.MM.YYYY" }}
     </div>
-    <div class="dates">{{ offer.startDate | date:'dd.MM.YYYY' }} - {{ offer.endDate | date:'dd.MM.YYYY' }}</div>
     @for(picture of offer.pictures; track picture){
     <img src="{{ picture }}" class="picture" alt="Offer picture" />
     } @empty { Brak zdjęć }
