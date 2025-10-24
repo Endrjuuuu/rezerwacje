@@ -1,9 +1,28 @@
 <div *ngIf="offer" class="offer">
   <div>
-    {{ offer.city }}
-    {{ offer.price }}
+    <div>
+      {{ offer.cityPl }}
+      {{ offer.price }}
+    </div>
+    <div>
+      {{ offer.place?.country }}
+    </div>
+    <div class="booking">Rezerwuj</div>
   </div>
   <div>
+    <div class="mainOffer">
+      @if(offer.pictures[0]){
+      <img
+        src="{{ offer.pictures[0] }}"
+        class="bigPicture"
+        alt="Offer picture"
+      />
+      }
+    </div>
+    <div class="description">
+      {{ offer.description }}
+    </div>
+    <div class="dates">{{ offer.startDate | date:'dd.MM.YYYY' }} - {{ offer.endDate | date:'dd.MM.YYYY' }}</div>
     @for(picture of offer.pictures; track picture){
     <img src="{{ picture }}" class="picture" alt="Offer picture" />
     } @empty { Brak zdjęć }

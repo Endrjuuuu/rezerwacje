@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Offer } from '../offers.service';
 import { NgIf } from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-offer',

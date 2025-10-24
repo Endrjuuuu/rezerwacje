@@ -4,9 +4,13 @@ import offers from './offers.json';
 
 export type Offer = {
   city: string;
-  price: number
+  cityPl: string;
+  price: number;
   place: Place | undefined;
   pictures: string[];
+  startDate: Date;
+  endDate: Date;
+  description: string;
 }
 
 export type CriteriaDefinition = {
@@ -23,9 +27,13 @@ export class OffersService {
     {
       return {
         city: element.enName,
+        cityPl: element.name,
         place: undefined,
         price: element.cost,
-        pictures: element.pictures
+        pictures: element.pictures,
+        startDate: new Date(element.startDate),
+        endDate: new Date(element.endDate),
+        description: element.description
       }
     }
   });
