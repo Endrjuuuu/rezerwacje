@@ -1,4 +1,11 @@
 <div *ngIf="offer" class="offer">
-  {{ offer.city }}
-  {{ offer.price }}
+  <div>
+    {{ offer.city }}
+    {{ offer.price }}
+  </div>
+  <div>
+    @for(picture of offer.pictures; track picture){
+    <img src="{{ picture }}" class="picture" alt="Offer picture" />
+    } @empty { Brak zdjęć }
+  </div>
 </div>

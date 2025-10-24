@@ -16,7 +16,7 @@ export class OffersComponent {
   @ViewChild('searchPrice') searchPrice!: ElementRef;
   offers: Offer[] = [];
   countries: string[] = [];
-  selectedCountry: string = '';
+  selectedCountry: string | undefined = '';
 
   selectedPrice: number = 200000;
   priceThresholds = [
@@ -26,6 +26,8 @@ export class OffersComponent {
     8000,
     9000
   ];
+
+  DEFAULT = 'DEFAULT';
 
   criteriaDefinition: CriteriaDefinition = {
     country: undefined,
@@ -41,13 +43,13 @@ export class OffersComponent {
   }
 
   onSelectedCountry(): void {
-    this.selectedCountry = this.searchCountry.nativeElement.value;
+    this.selectedCountry = this.searchCountry.nativeElement.value === this.DEFAULT ? undefined : this.searchCountry.nativeElement.value;
     this.criteriaDefinition.country = this.selectedCountry;
     this.offers = this.offersService.searchByCriteria(this.criteriaDefinition);
   }
 
   onSelectedPrice(): void {
-    this.selectedPrice = this.searchPrice.nativeElement.value;
+    this.selectedPrice = this.searchPrice.nativeElement.value === this.DEFAULT ? Number.POSITIVE_INFINITY : this.searchPrice.nativeElement.value;
     this.criteriaDefinition.maxPrice = this.selectedPrice;
     this.offers = this.offersService.searchByCriteria(this.criteriaDefinition);
   }

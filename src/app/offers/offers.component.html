@@ -6,6 +6,7 @@
     #searchCountry
     (change)="onSelectedCountry()"
   >
+    <option [value]="DEFAULT">Dowolny kraj</option>
     <option *ngFor="let country of countries" [value]="country">
       {{ country }}
     </option>
@@ -18,6 +19,7 @@
     #searchPrice
     (change)="onSelectedPrice()"
   >
+    <option [value]="DEFAULT">Dowolna cena</option>
     <option *ngFor="let price of priceThresholds" [value]="price">
       {{ price }}
     </option>

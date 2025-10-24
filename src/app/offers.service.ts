@@ -6,6 +6,7 @@ export type Offer = {
   city: string;
   price: number
   place: Place | undefined;
+  pictures: string[];
 }
 
 export type CriteriaDefinition = {
@@ -23,7 +24,8 @@ export class OffersService {
       return {
         city: element.enName,
         place: undefined,
-        price: element.cost
+        price: element.cost,
+        pictures: element.pictures
       }
     }
   });
