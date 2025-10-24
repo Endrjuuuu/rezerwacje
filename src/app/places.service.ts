@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import places from './places.json';
 
 export type Place = {
   city: string;
   country: string;
-  isCapital: boolean;
+  isCapitol: boolean;
   population: number;
 }
 
@@ -12,30 +13,15 @@ export type Place = {
 })
 export class PlacesService {
 
-  places: Place[] = [
-    {
-      city: 'Chicago',
-      country: 'USA',
-      isCapital: false,
-      population: 2697,
-    },
-    {
-      city: 'Rome',
-      country: 'Italy',
-      isCapital: true,
-      population: 2873
-    },
-    {
-      city: 'London',
-      country: 'UK',
-      isCapital: true,
-      population: 3210
-    }
-  ];
+  places: Place[] = places.cities;
 
   constructor() { }
 
   getPlaceByName(name: string): Place | undefined {
     return this.places.find(element => element.city === name)
+  }
+
+  getCountries(): string[] {
+    return [...new Set(this.places.map(place => place.country))].sort();
   }
 }

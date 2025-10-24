@@ -1,3 +1,29 @@
+<div class="search">
+  <label for="country-select">Country: </label>
+  <select
+    name="country"
+    id="country-select"
+    #searchCountry
+    (change)="onSelectedCountry()"
+  >
+    <option *ngFor="let country of countries" [value]="country">
+      {{ country }}
+    </option>
+  </select>
+
+  <label for="priceThreshold-select">Price: </label>
+  <select
+    name="priceThreshold"
+    id="priceThreshold-select"
+    #searchPrice
+    (change)="onSelectedPrice()"
+  >
+    <option *ngFor="let price of priceThresholds" [value]="price">
+      {{ price }}
+    </option>
+  </select>
+</div>
+
 <div *ngFor="let offer of offers">
   <app-offer [offer]="offer"></app-offer>
 </div>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Place, PlacesService } from './places.service';
+import offers from './offers.json';
 
 export type Offer = {
   city: string;
@@ -12,24 +13,15 @@ export type Offer = {
 })
 export class OffersService {
 
-  offers: Offer[] = [
+  offers: Offer[] = offers.details.map((element) => {
     {
-      city: 'Chicago',
-      price: 5000,
-      place: undefined,
-    },
-    {
-      city: 'Rome',
-      price: 6000,
-
-      place: undefined,
-    },
-    {
-      city: 'London',
-      price: 7000,
-      place: undefined
+      return {
+        city: element.enName,
+        place: undefined,
+        price: element.cost
+      }
     }
-  ];
+  });
 
   constructor(private placesService: PlacesService) { }
 
@@ -44,11 +36,19 @@ export class OffersService {
     );
   }
 
+  searchByCountry(country: string): Offer[] {
+    return this.list().filter(offer => offer.place?.country === country);
+  };
+
   findOfferWithLowestPrice(): Offer {
     const offer: Offer = this.offers.reduce((previous, current) =>
       previous.price < current.price ? previous : current);
 
     offer.place = this.placesService.getPlaceByName(offer.city)
     return offer;
+  }
+
+  searchByMaxPrice(price: number): Offer[] {
+    return this.list().filter(offer => offer.price <= price);
   }
 }
