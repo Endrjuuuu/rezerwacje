@@ -1,9 +1,3 @@
 <div *ngFor="let offer of offers">
-  {{ offer.city | uppercase }}
-  <div *ngFor="let v of offer | keyvalue">{{ v.key }}: {{ v.value }}</div>
-  <span *ngIf="offer.place">
-    <div *ngFor="let v of offer.place | keyvalue">
-      wewnątrz place: {{ v.key }} : {{ v.value }}
-    </div>
-  </span>
+  <app-offer [offer]="offer"></app-offer>
 </div>
