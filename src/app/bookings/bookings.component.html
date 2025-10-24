@@ -1,6 +1,10 @@
 <ul>
-  @for (booking of bookings; track booking) {
-  <li>{{ booking | json }}</li>
+  @for (booking of bookings; track booking.id) {
+  <div class="booking">
+    Dorośli: {{ booking.adults }} Dzieci: {{ booking.children }}
+    <app-offer [offer]="booking.offer"></app-offer>
+  </div>
+
   } @empty {
   <li>Brak rezerwacji</li>
   }

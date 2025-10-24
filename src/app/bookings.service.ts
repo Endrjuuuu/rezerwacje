@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export type Booking = {
-  id: string;
+  id?: string;
   name: string;
   adults: number;
   children: number;
