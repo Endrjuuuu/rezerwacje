@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Offer, OffersService } from '../offers.service';
+import { CriteriaDefinition, Offer, OffersService } from '../offers.service';
 import { OfferComponent } from '../offer/offer.component';
 import { PlacesService } from '../places.service';
 
@@ -27,6 +27,11 @@ export class OffersComponent {
     9000
   ];
 
+  criteriaDefinition: CriteriaDefinition = {
+    country: undefined,
+    maxPrice: Number.POSITIVE_INFINITY
+  };
+
   constructor(
     private offersService: OffersService,
     private placesService: PlacesService
@@ -37,11 +42,13 @@ export class OffersComponent {
 
   onSelectedCountry(): void {
     this.selectedCountry = this.searchCountry.nativeElement.value;
-    this.offers = this.offersService.searchByCountry(this.selectedCountry);
+    this.criteriaDefinition.country = this.selectedCountry;
+    this.offers = this.offersService.searchByCriteria(this.criteriaDefinition);
   }
 
   onSelectedPrice(): void {
     this.selectedPrice = this.searchPrice.nativeElement.value;
-    this.offers = this.offersService.searchByMaxPrice(this.selectedPrice);
+    this.criteriaDefinition.maxPrice = this.selectedPrice;
+    this.offers = this.offersService.searchByCriteria(this.criteriaDefinition);
   }
 }

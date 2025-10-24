@@ -8,6 +8,11 @@ export type Offer = {
   place: Place | undefined;
 }
 
+export type CriteriaDefinition = {
+  country?: string;
+  maxPrice: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -50,5 +55,19 @@ export class OffersService {
 
   searchByMaxPrice(price: number): Offer[] {
     return this.list().filter(offer => offer.price <= price);
+  }
+
+  searchByCriteria(criteriaDefinition: CriteriaDefinition): Offer[] {
+    let filteredOffers = this.list();
+
+    if (criteriaDefinition.country) {
+      filteredOffers = filteredOffers.filter(offer => offer.place?.country === criteriaDefinition.country);
+    }
+
+    if (criteriaDefinition.maxPrice < Number.POSITIVE_INFINITY) {
+      filteredOffers = filteredOffers.filter(offer => offer.price <= criteriaDefinition.maxPrice)
+    }
+
+    return filteredOffers;
   }
 }
