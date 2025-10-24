@@ -1,11 +1,9 @@
-<ul>
-  @for (booking of bookings; track booking.id) {
-  <div class="booking">
-    Dorośli: {{ booking.adults }} Dzieci: {{ booking.children }}
-    <app-offer [offer]="booking.offer"></app-offer>
-  </div>
+@for (booking of bookings; track booking.id) {
+<div class="booking">
+  Dorośli: {{ booking.adults }} Dzieci: {{ booking.children }}
+  <app-offer [showAddBooking]="false" [offer]="booking.offer"></app-offer>
+</div>
 
-  } @empty {
-  <li>Brak rezerwacji</li>
-  }
-</ul>
+} @empty {
+<h2>Brak rezerwacji</h2>
+}

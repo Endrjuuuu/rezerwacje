@@ -18,6 +18,7 @@ export class OfferComponent {
   }
 
   @Input() offer?: Offer;
+  @Input() showAddBooking: boolean = true;
 
   addBooking(offer: Offer) {
     console.log(offer);
