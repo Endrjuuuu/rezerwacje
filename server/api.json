@@ -1,0 +1,12 @@
+{
+    "booking": [
+        {
+            "id": "1234",
+            "name": "rezerwacja 1"
+        },
+         {
+            "id": "2345",
+            "name": "rezerwacja 2"
+        }
+    ]
+}
