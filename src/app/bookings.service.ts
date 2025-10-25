@@ -9,6 +9,7 @@ export type Booking = {
   adults: number;
   children: number;
   offer: Offer;
+  totalCost?: number;
 }
 
 @Injectable({

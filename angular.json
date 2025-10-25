@@ -4,6 +4,9 @@
   "newProjectRoot": "projects",
   "projects": {
     "rezerwacje": {
+      "i18n": {
+        "sourceLocale": "pl-PL"
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {

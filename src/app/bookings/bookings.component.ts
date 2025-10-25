@@ -27,7 +27,14 @@ export class BookingsComponent implements OnInit {
         console.log("dane nie zostały pobrane");
       },
       next: (data: Booking[]) => {
-        this.bookings = data
+        this.bookings = data.map(
+          (booking: Booking) => {
+            return {
+              ...booking,
+              totalCost: booking.offer.price * (booking.adults + booking.children * 0.5)
+            }
+          }
+        )
       }
     });
   }

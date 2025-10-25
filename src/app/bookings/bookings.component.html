@@ -4,7 +4,7 @@
     <ul class="booking-summary">
       <li>Dorośli: {{ booking.adults }}</li>
       <li>Dzieci: {{ booking.children }}</li>
-      <li>Koszt całkowity: {{ 1111 }} PLN</li>
+      <li>Koszt całkowity: {{ booking.totalCost | number }} PLN</li>
     </ul>
     <div class="cancel" (click)="cancelBooking(booking.id)">
       Anuluj rezerwację

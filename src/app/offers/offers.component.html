@@ -1,5 +1,5 @@
 <div class="search">
-  <label for="country-select">Country: </label>
+  <label for="country-select">Kraj: </label>
   <select
     name="country"
     id="country-select"
@@ -12,7 +12,7 @@
     </option>
   </select>
 
-  <label for="priceThreshold-select">Price: </label>
+  <label for="priceThreshold-select">Cena: </label>
   <select
     name="priceThreshold"
     id="priceThreshold-select"
@@ -22,6 +22,30 @@
     <option [value]="DEFAULT">Dowolna cena</option>
     <option *ngFor="let price of priceThresholds" [value]="price">
       {{ price }}
+    </option>
+  </select>
+
+  <label for="numberOfAdults">Liczba dorosłych: </label>
+  <select
+    name="numberOfAdults"
+    id="numberOfAdults"
+    #numberOfAdults
+    (change)="onSelectedAdults()"
+  >
+    <option *ngFor="let adultsNumber of adults" [value]="adultsNumber">
+      {{ adultsNumber }}
+    </option>
+  </select>
+
+  <label for="numberOfChildren">Liczba dzieci: </label>
+  <select
+    name="numberOfChildren"
+    id="numberOfChildren"
+    #numberOfChildren
+    (change)="onSelectedChildren()"
+  >
+    <option *ngFor="let childrenNumber of children" [value]="childrenNumber">
+      {{ childrenNumber }}
     </option>
   </select>
 </div>

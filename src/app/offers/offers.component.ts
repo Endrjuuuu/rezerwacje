@@ -14,17 +14,39 @@ import { PlacesService } from '../places.service';
 export class OffersComponent {
   @ViewChild('searchCountry') searchCountry!: ElementRef;
   @ViewChild('searchPrice') searchPrice!: ElementRef;
+  @ViewChild('numberOfAdults') viewChildNumberOfAdults!: ElementRef;
+  @ViewChild('numberOfChildren') viewChildNumberOfChildren!: ElementRef;
+
   offers: Offer[] = [];
   countries: string[] = [];
-  selectedCountry: string | undefined = '';
 
+  selectedCountry: string | undefined = '';
   selectedPrice: number = 200000;
+
+  numberOfAdults = 1;
+  numberOfChildren = 0;
+
   priceThresholds = [
     5000,
     6000,
     7000,
     8000,
     9000
+  ];
+  adults = [
+    1,
+    2,
+    3,
+    4,
+    5
+  ];
+  children = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
   ];
 
   DEFAULT = 'DEFAULT';
@@ -52,5 +74,13 @@ export class OffersComponent {
     this.selectedPrice = this.searchPrice.nativeElement.value === this.DEFAULT ? Number.POSITIVE_INFINITY : this.searchPrice.nativeElement.value;
     this.criteriaDefinition.maxPrice = this.selectedPrice;
     this.offers = this.offersService.searchByCriteria(this.criteriaDefinition);
+  }
+
+  onSelectedAdults(): void {
+    this.numberOfAdults = this.viewChildNumberOfAdults.nativeElement.value;
+  }
+
+  onSelectedChildren(): void {
+    this.numberOfChildren = this.viewChildNumberOfChildren.nativeElement.value;
   }
 }

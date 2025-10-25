@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { Offer } from '../offers.service';
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { DatePipe } from '@angular/common';
 import { Booking, BookingsService } from '../bookings.service';
 
 @Component({
   selector: 'app-offer',
   standalone: true,
-  imports: [NgIf, DatePipe],
+  imports: [CommonModule, NgIf, DatePipe],
   templateUrl: './offer.component.html',
   styleUrl: './offer.component.scss'
 })

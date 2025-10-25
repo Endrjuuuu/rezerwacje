@@ -8,6 +8,7 @@
 
 .header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -17,7 +18,12 @@
 
 .cancel {
     background-color: $accentColor;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width: 80px;
+    text-align: center;
+    padding: $small-gap;
 
     &:hover {
         cursor: pointer;
