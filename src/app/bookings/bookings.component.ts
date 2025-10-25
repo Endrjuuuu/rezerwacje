@@ -16,7 +16,12 @@ export class BookingsComponent implements OnInit {
 
   constructor(private bookingsService: BookingsService) {
   }
+
   ngOnInit(): void {
+    this.refreshBookings();
+  }
+
+  refreshBookings() {
     this.bookingsService.getBookings().subscribe({
       error: () => {
         console.log("dane nie zostały pobrane");
@@ -25,5 +30,21 @@ export class BookingsComponent implements OnInit {
         this.bookings = data
       }
     });
+  }
+
+  cancelBooking(id?: string): void {
+    if (!id) {
+      return;
+    }
+
+    this.bookingsService.cancelBooking(id).subscribe({
+      error: () => {
+        console.log("błąd cancel booking");
+
+      },
+      next: (data: any) => {
+        this.refreshBookings();
+      }
+    })
   }
 }

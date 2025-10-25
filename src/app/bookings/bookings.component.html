@@ -1,6 +1,15 @@
 @for (booking of bookings; track booking.id) {
 <div class="booking">
-  Dorośli: {{ booking.adults }} Dzieci: {{ booking.children }}
+  <div class="header">
+    <ul class="booking-summary">
+      <li>Dorośli: {{ booking.adults }}</li>
+      <li>Dzieci: {{ booking.children }}</li>
+      <li>Koszt całkowity: {{ 1111 }} PLN</li>
+    </ul>
+    <div class="cancel" (click)="cancelBooking(booking.id)">
+      Anuluj rezerwację
+    </div>
+  </div>
   <app-offer [showAddBooking]="false" [offer]="booking.offer"></app-offer>
 </div>
 

@@ -28,4 +28,8 @@ export class BookingsService {
   addBooking(data: Booking): Observable<any> {
     return this.http.post<Booking>(this.url, data);
   }
+
+  cancelBooking(id: string): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

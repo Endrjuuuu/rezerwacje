@@ -17,6 +17,10 @@
         padding: $small-gap;
         text-align: center;
         color: $primaryColor;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .mainOffer {
