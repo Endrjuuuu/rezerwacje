@@ -78,9 +78,15 @@ export class OffersComponent {
 
   onSelectedAdults(): void {
     this.numberOfAdults = this.viewChildNumberOfAdults.nativeElement.value;
+    this.numberOfAdultsAndChildren()
   }
 
   onSelectedChildren(): void {
     this.numberOfChildren = this.viewChildNumberOfChildren.nativeElement.value;
+    this.numberOfAdultsAndChildren()
+  }
+
+  numberOfAdultsAndChildren() {
+    alert('Liczba doroslych: ' + this.numberOfAdults + ' Liczba dzieci: ' + this.numberOfChildren)
   }
 }
